@@ -1,0 +1,35 @@
+main {
+    margin-top: 100px;
+   display: flex;
+   justify-content: center;
+   
+}
+.list-group-item:hover {
+background-color:greenyellow;
+}
+header
+{
+    background-color: rgb(116, 197, 116);
+   padding: 10px;
+ 
+}
+
+.list-group{
+    width: 400px;
+}
+.list-group{
+    visibility: hidden;
+}
+.btn-primary
+{
+    background-color: purple;
+    border-color: rosybrown;
+}
+.btn-primary:hover
+{
+    background-color: rebeccapurple;
+}
+.wrap
+{
+    margin: 20px;
+}
