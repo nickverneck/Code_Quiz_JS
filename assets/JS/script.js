@@ -100,7 +100,7 @@ function checkA(time)
         }
     else
     {
-        console.log(qCount)
+        
         var audio = new Audio('./assets/SFX/negative.aac');
         audio.play();
         timeLimit-=10;
@@ -109,7 +109,7 @@ function checkA(time)
         if (qCount < questions.length && timeLimit > 0)
         {
         fillQuestion(qCount)
-        console.log("wrong" + event.target.textContent)
+    
     }
     else
     {
@@ -156,11 +156,14 @@ function countDown() {
       
       answerList.style.display = "none";
       pEl.style.display = "block";
+      //Easter EGG
       if (score === 0)
       {
           questionEl.textContent = "You got Derezzed";
           pEl.textContent = "Your knowledge about Tron is as good as a stormstropper aim.You should try again :)";
           startBtn.style.display = "block";
+          document.getElementById("easter-egg").style.display="block";
+
       }
       else
       {
@@ -169,14 +172,14 @@ function countDown() {
         questionEl.textContent = "Congratulations!";
         pEl.textContent = "Your total score is: "+score;
         btnScore.addEventListener("click",event =>{
-            var lastScore = JSON.parse(localStorage.getItem("quizScore"));
+            var lastScore = localStorage.getItem("quizScore");
             var userVal = initialsEl.value.trim() ;
             var localJson = {[userVal] :score}
+            lastScore+= JSON.stringify(localJson);
             
-            lastScore.userVal = score;
             console.log(lastScore);
             
-            localStorage.setItem("quizScore", JSON.stringify(localJson));
+            localStorage.setItem("quizScore", lastScore);
             pEl.textContent = "Hey,"+userVal +" your score of: "+score+" has been saved to the score list" ;
             document.querySelector(".add-score").style.display = "none";
         })
@@ -201,7 +204,7 @@ timerEl.textContent ="Time: " + timeLimit + " seconds";
 // fill up the first index of question and start the function to check if user clicked on the option
 var time = countDown();
 fillQuestion(0);
-console.log(questions)
+
 checkA(time);
 }
 startBtn.addEventListener("click",startQuiz)

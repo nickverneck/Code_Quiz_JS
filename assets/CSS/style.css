@@ -13,6 +13,10 @@ header
    padding: 10px;
  
 }
+#easter-egg
+{
+    display: none;
+}
 .add-score{
     display: none;
 }
