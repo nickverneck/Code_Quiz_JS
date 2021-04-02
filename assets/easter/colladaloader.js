@@ -36,7 +36,7 @@ import {
 	Vector3,
 	VectorKeyframeTrack
 } from './module.js';
-import { TGALoader } from './tgaLoader.js';
+import { TGALoader } from './tgaloader.js';
 
 var ColladaLoader = function ( manager ) {
 
