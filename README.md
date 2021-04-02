@@ -2,7 +2,7 @@
 ## Overview
 vanilla JS Quiz about Tron with time,score,and sound functions.
 easter egg in three.js for fun.
-
+live link (https://nickverneck.github.io/Code_Quiz_JS/)
 ## How to use it!
 
 1. press Start Quiz!
