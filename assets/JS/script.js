@@ -12,19 +12,42 @@ var initialsEl = document.getElementById("initials");
 var timeLimit = 75;
 //setting array with all the questions
 var questions = [{
-    title: "question one?!",
-    options:["option one", "option two","numba 3","hey its faur"],
-    answer:"numba 3"
+    title: "How does the original creator of the digital frontier refer to his computer creation?",
+    options:["the Penguin", "the Waffle","the Grid","the Matrix"],
+    answer:"the Grid"
 },
 {
-    title: "question two?!",
-    options:["option a", "option b","its c","hey its D"],
-    answer:"its c"
+    title: "Jeff Bridges is an iconic actor. Which character does he play in this film?",
+    options:["Neuromancer", "Kevin Flynn","Justabeeper","El Grande Burrito"],
+    answer:"Kevin Flynn"
 },
 {
-    title: "question 3?!",
-    options:["option a", "option b","its c","hey its D"],
-    answer:"option a"
+    title: "What is the name of ENCOM's largest shareholder?",
+    options:["Skip", "Sylvester","Sam","Sue"],
+    answer:"Sam"
+},
+{
+    title: "Where is the entrance to the digital world found?",
+    options:["in an arcade", "at a library","in a zoo","a rabbit festival"],
+    answer:"in an arcade"
+}
+,
+{
+    title: "Upon entering the digital world, the son of the creator is engaged in battle. He suffers some injuries during the battle. He is thereafter given a particular designation. What is it?",
+    options:["loser", "snoozer","boozer","user"],
+    answer:"user"
+}
+,
+{
+    title: "In the digital frontier, the son of the creator has enemies and friends. One nemesis happens to go by the acronym of CLU. What does CLU represent?",
+    options:["Created Like Unicorns", "Could Like Users","Codified Likeness Utility","Cold Lake Underground"],
+    answer:"Codified Likeness Utility"
+}
+,
+{
+    title: "The son of the creator has an ally in the quest. What is her name?",
+    options:["Quidbot", "Quorra","QuequeQ","Quickness"],
+    answer:"Quorra"
 }
 ];
 //Lets create a function to grab the questions array and populate the options elements with the array values
