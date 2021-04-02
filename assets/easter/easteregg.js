@@ -66,7 +66,7 @@ import * as THREE from './module.js';
 				renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
 				renderer.setClearColor( 0x000000, 0 ); 
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+				renderer.setSize( window.innerWidth/3, window.innerHeight/3 );
 				container.appendChild( renderer.domElement );
 
 				//

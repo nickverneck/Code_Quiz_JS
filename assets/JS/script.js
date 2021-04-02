@@ -161,7 +161,7 @@ function countDown() {
       {
           questionEl.textContent = "You got Derezzed";
           pEl.textContent = "Your knowledge about Tron is as good as a stormstropper aim.You should try again :)";
-          startBtn.style.display = "block";
+          startBtn.style.display = "";
           document.getElementById("easter-egg").style.display="block";
 
       }
@@ -172,14 +172,14 @@ function countDown() {
         questionEl.textContent = "Congratulations!";
         pEl.textContent = "Your total score is: "+score;
         btnScore.addEventListener("click",event =>{
-            var lastScore = localStorage.getItem("quizScore");
+            var lastScore = JSON.parse(localStorage.getItem("quizScore"));
             var userVal = initialsEl.value.trim() ;
             var localJson = {[userVal] :score}
-            lastScore+= JSON.stringify(localJson);
+            lastScore = {...lastScore, ...localJson}
             
             console.log(lastScore);
             
-            localStorage.setItem("quizScore", lastScore);
+            localStorage.setItem("quizScore", JSON.stringify(lastScore));
             pEl.textContent = "Hey,"+userVal +" your score of: "+score+" has been saved to the score list" ;
             document.querySelector(".add-score").style.display = "none";
         })
